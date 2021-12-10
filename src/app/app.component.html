@@ -1,8 +1,7 @@
-<!-- <app-menu></app-menu> -->
-
-<!-- <app-rodape></app-rodape> -->
+<app-menu *ngIf='authService.logado() == true'></app-menu>
+<router-outlet></router-outlet>
+<app-rodape *ngIf='authService.logado() == true'></app-rodape>
 
 <!-- <app-entrar></app-entrar> -->
 <!-- <app-cadastrar></app-cadastrar> -->
 
-<router-outlet></router-outlet>
