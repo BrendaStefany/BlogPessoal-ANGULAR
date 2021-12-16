@@ -36,6 +36,10 @@ getByIdUser(id: number): Observable<Usuario>{
   return this.http.get<Usuario>(`https://blogpessoalbs.herokuapp.com/usuarios/${id}`, this.token)
 }
 
+putUsuario(usuario: Usuario): Observable<Usuario>{
+  return this.http.put<Usuario>('https://blogpessoalbs.herokuapp.com/usuarios/atualizar', usuario, this.token)
+}
+
 logado(){
   let ok: boolean = false
 
